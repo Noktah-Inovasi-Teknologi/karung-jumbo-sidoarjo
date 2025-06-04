@@ -170,12 +170,83 @@ function scrollToSection(sectionId: string) {
         </div>
       </div>
       <br />
-      <div class="flex items-center gap-4 w-full">
-        <div class="h-[120px] basis-1/5 bg-red-500">Test</div>
-        <div class="h-[120px] basis-1/5 bg-red-500">Test</div>
-        <div class="h-[120px] basis-1/5 bg-red-500">Test</div>
-        <div class="h-[120px] basis-1/5 bg-red-500">Test</div>
-        <div class="h-[120px] basis-1/5 bg-red-500">Test</div>
+      <div class="flex items-center gap-8 w-full">
+        <div
+          class="relative aspect-[6/8] basis-1/5 rounded-3xl border border-black"
+        >
+          <img
+            src="/images/2.jpg"
+            alt="Karung Jumbo"
+            class="h-full w-full object-cover rounded-3xl"
+          />
+          <p
+            class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white text-sm bg-black/40 px-3 py-2 rounded-3xl text-center"
+          >
+            Berkualitas dan Durable
+          </p>
+        </div>
+        <div
+          class="flex flex-col justify-between aspect-[5/8] basis-1/5 bg-[#DAFF95] border border-black rounded-3xl p-8"
+        >
+          <p class="text-sm text-black text-wrap">
+            Solusi ekonomis untuk kebutuhan pengemasan & penyimpanan industri.
+          </p>
+          <Icon class="!w-16 !h-16 text-black" name="uil:truck" />
+        </div>
+        <div
+          class="relative aspect-[4/8] basis-1/5 rounded-3xl border-1 border-black"
+        >
+          <img
+            src="/images/3.jpg"
+            alt="Karung Jumbo"
+            class="h-full w-full object-cover rounded-3xl"
+          />
+          <p
+            class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white text-sm bg-black/40 px-3 py-2 rounded-3xl text-center"
+          >
+            Tersedia dalam Berbagai Ukuran
+          </p>
+        </div>
+        <div
+          class="flex flex-col justify-between aspect-[5/8] basis-1/5 bg-[#9DE345] border border-black rounded-3xl"
+        >
+          <div class="p-4 text-black">
+            <p>Produk kami lebih unggul karena:</p>
+          </div>
+          <div
+            class="bg-[#DAFF95] border-t border-black text-black text-xs p-4 rounded-3xl"
+          >
+            <div class="flex">
+              <Icon class="!w-6 !h-6" name="uil:check" />
+              <p>Ukuran standar industri (1 ton+)</p>
+            </div>
+            <div class="flex">
+              <Icon class="!w-6 !h-6" name="uil:check" />
+              <p>Kondisi layak pakai & bersih</p>
+            </div>
+            <div class="flex">
+              <Icon class="!w-6 !h-6" name="uil:check" />
+              <p>Siap dikirim dalam jumlah besar</p>
+            </div>
+            <div class="flex">
+              <Icon class="!w-6 !h-6" name="uil:check" />
+              <p>Lebih hemat dibanding karung baru</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="aspect-[6/8] basis-1/5 bg-[#9DE345] rounded-3xl p-8 justify-between"
+        >
+          <div class="flex flex-col justify-between h-full">
+            <p class="text-xl text-black">Bukan yang Anda cari?</p>
+            <Button @click="scrollToSection('product')" class="!rounded-3xl">
+              <div class="flex gap-2 items-center">
+                <p>Cek Produk Lainnya</p>
+                <Icon class="!w-6 !h-6" name="uil:arrow-right" />
+              </div>
+            </Button>
+          </div>
+        </div>
       </div>
     </div>
     <div class="flex flex-col gap-4 text-center" id="why-us">
