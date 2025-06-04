@@ -64,49 +64,58 @@ const products = [
 ];
 const testimonials = [
   {
-    name: "Testimonial 1",
-    content: "Isi Testimonial 1",
-    image: "/images/1.jpg",
+    name: "Tony Handoko",
+    content:
+      "Saya sudah beberapa kali beli karung jumbo di sini. Barangnya kuat dan awet, cocok banget buat kebutuhan di gudang. Pelayanannya juga enak, cepat tanggap.",
+    image: "/images/user1.png",
   },
   {
-    name: "Testimonial 2",
-    content: "Isi Testimonial 2",
-    image: "/images/2.jpg",
+    name: "Liem Tjokro",
+    content:
+      "Tim saya biasa beli karung plastik di sini. Kualitasnya konsisten, nggak gampang robek. Harga masuk akal, jadi langganan terus sampai sekarang.",
+    image: "/images/user2.png",
   },
   {
-    name: "Testimonial 3",
-    content: "Isi Testimonial 3",
-    image: "/images/3.jpg",
+    name: "Agus Hardi Tambunan",
+    content:
+      "Awalnya coba-coba beli satu kali, tapi ternyata cocok. Sekarang tiap bulan pasti order. Pengirimannya cepet dan nggak pernah salah kirim.",
+    image: "/images/user3.png",
   },
   {
-    name: "Testimonial 1",
-    content: "Isi Testimonial 1",
-    image: "/images/1.jpg",
+    name: "Budi Santoso",
+    content:
+      "Usaha saya butuh banyak karung besar buat packing. Di sini lengkap dan gampang dihubungi. Nggak ribet, langsung kirim, langsung pakai.",
+    image: "/images/user4.png",
   },
   {
-    name: "Testimonial 2",
-    content: "Isi Testimonial 2",
-    image: "/images/2.jpg",
+    name: "Hendri Wijaya",
+    content:
+      "Saya suka karena mereka ngerti kebutuhan pelanggan. Pas saya butuh urgent, langsung dibantu. Jarang banget ada layanan secepat ini.",
+    image: "/images/user5.png",
   },
   {
-    name: "Testimonial 3",
-    content: "Isi Testimonial 3",
-    image: "/images/3.jpg",
+    name: "Eko Prasetyo",
+    content:
+      "Karung jumbo dari sini kokoh banget. Udah saya coba buat bahan berat dan tetap aman. Harganya juga masih masuk akal buat skala industri.",
+    image: "/images/user6.png",
   },
   {
-    name: "Testimonial 1",
-    content: "Isi Testimonial 1",
-    image: "/images/1.jpg",
+    name: "Nanang Prabowo",
+    content:
+      "Kami pakai plastik dari sini buat produksi harian. Bahannya bagus, nggak gampang sobek, dan yang paling penting, stoknya selalu ada.",
+    image: "/images/user7.png",
   },
   {
-    name: "Testimonial 2",
-    content: "Isi Testimonial 2",
-    image: "/images/2.jpg",
+    name: "Setiawan Adi",
+    content:
+      "Pernah sekali ada masalah kecil soal pengiriman, tapi langsung diselesaikan dengan baik. Itu bikin saya makin percaya sama layanan mereka.",
+    image: "/images/user8.png",
   },
   {
-    name: "Testimonial 3",
-    content: "Isi Testimonial 3",
-    image: "/images/3.jpg",
+    name: "Yulianto Trianto",
+    content:
+      "Saya udah coba beli dari beberapa tempat, tapi yang paling nyaman tetap di sini. Fast response, ramah, dan barang selalu sesuai harapan.",
+    image: "/images/user9.png",
   },
 ];
 
@@ -315,10 +324,25 @@ function scrollToSection(sectionId: string) {
         </template>
       </Carousel>
     </div>
-    <div class="" id="testimonial">
-      <Carousel :value="testimonials" :numVisible="3" :numScroll="3">
+    <div class="p-8 bg-[#FAFAFA]" id="testimonial">
+      <Carousel
+        :value="testimonials"
+        :numVisible="3"
+        :numScroll="3"
+        pt:itemlist:class=""
+      >
         <template #item="slotProps">
-          <p>{{ slotProps }}</p>
+          <div class="flex gap-4">
+            <img
+              :src="slotProps.data.image"
+              alt="Testimonial Image"
+              class="w-24 h-24 rounded-full object-cover"
+            />
+            <div class="flex flex-col gap-2 text-black">
+              <p class="text-2xl font-semibold">{{ slotProps.data.name }}</p>
+              <p class="text-sm">{{ slotProps.data.content }}</p>
+            </div>
+          </div>
         </template>
       </Carousel>
     </div>
