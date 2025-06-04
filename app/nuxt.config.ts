@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxt/icon",
     "@nuxt/fonts",
+    "@nuxt/scripts",
   ],
   primevue: {
     options: {

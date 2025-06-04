@@ -322,13 +322,29 @@ function scrollToSection(sectionId: string) {
         </template>
       </Carousel>
     </div>
-    <div class="" id="order-now">
-      <div class="flex flex-col items-center gap-4">
-        <p class="text-3xl">Pesan Sekarang</p>
-        <p class="text-xl">
-          Hubungi Kami
-          <span class="text-red-500">+62 123 4567 890</span>
-        </p>
+    <div class="bg-[#FAFAFA] p-8" id="order-now">
+      <div class="flex flex-col items-center gap-4 text-black">
+        <div class="flex flex-col gap-4 text-center p-8">
+          <p class="text-5xl helvetica">Cocok dengan Produk Kami?</p>
+          <p class="text-5xl helvetica">Pesan Sekarang Juga!</p>
+        </div>
+        <Button class="!rounded-3xl !m-8">
+          <div class="flex gap-2 items-center">
+            <Icon class="!w-6 !h-6" name="uil:whatsapp" />
+            <p>Pesan Sekarang</p>
+          </div>
+        </Button>
+        <p class="text-lg">atau</p>
+        <p class="text-5xl helvetica">Datang Langsung ke Tempat Kami</p>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63301.749251788024!2d112.52613881637731!3d-7.425427599999992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78095b5625e06b%3A0x105a547091935f63!2sGudang%20Karung%20Jumbo!5e0!3m2!1sen!2sid!4v1749036329545!5m2!1sen!2sid"
+          height="480"
+          class="w-full items-center rounded-3xl my-8"
+          style="border: 0"
+          allowfullscreen="true"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
     </div>
     <div class="w-full flex bg-[#FAFAFA] pt-8 px-8" id="footer">
