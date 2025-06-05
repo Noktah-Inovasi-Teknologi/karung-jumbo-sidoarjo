@@ -19,47 +19,47 @@ const products = [
   {
     name: "Karung Jumbo 1",
     description: "Deskripsi Karung Jumbo 1",
-    image: "/images/1.jpg",
+    image: "/images/1.JPG",
   },
   {
     name: "Karung Jumbo 2",
     description: "Deskripsi Karung Jumbo 2",
-    image: "/images/2.jpg",
+    image: "/images/1.JPG",
   },
   {
     name: "Karung Jumbo 3",
     description: "Deskripsi Karung Jumbo 3",
-    image: "/images/3.jpg",
+    image: "/images/1.JPG",
   },
   {
     name: "Karung Jumbo 1",
     description: "Deskripsi Karung Jumbo 1",
-    image: "/images/1.jpg",
+    image: "/images/1.JPG",
   },
   {
     name: "Karung Jumbo 2",
     description: "Deskripsi Karung Jumbo 2",
-    image: "/images/2.jpg",
+    image: "/images/1.JPG",
   },
   {
     name: "Karung Jumbo 3",
     description: "Deskripsi Karung Jumbo 3",
-    image: "/images/3.jpg",
+    image: "/images/1.JPG",
   },
   {
     name: "Karung Jumbo 1",
     description: "Deskripsi Karung Jumbo 1",
-    image: "/images/1.jpg",
+    image: "/images/1.JPG",
   },
   {
     name: "Karung Jumbo 2",
     description: "Deskripsi Karung Jumbo 2",
-    image: "/images/2.jpg",
+    image: "/images/1.JPG",
   },
   {
     name: "Karung Jumbo 3",
     description: "Deskripsi Karung Jumbo 3",
-    image: "/images/3.jpg",
+    image: "/images/1.JPG",
   },
 ];
 const testimonials = [
