@@ -184,7 +184,7 @@ function scrollToSection(sectionId: string) {
           class="relative aspect-[6/8] basis-1/5 rounded-3xl border border-black"
         >
           <img
-            src="/images/2.jpg"
+            src="/images/2.JPG"
             alt="Karung Jumbo"
             class="h-full w-full object-cover rounded-3xl"
           />
@@ -206,7 +206,7 @@ function scrollToSection(sectionId: string) {
           class="relative aspect-[4/8] basis-1/5 rounded-3xl border-1 border-black"
         >
           <img
-            src="/images/3.jpg"
+            src="/images/3.JPG"
             alt="Karung Jumbo"
             class="h-full w-full object-cover rounded-3xl"
           />
