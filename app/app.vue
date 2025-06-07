@@ -17,48 +17,43 @@ const menuItems = [
 ];
 const products = [
   {
-    name: "Karung Jumbo 1",
-    description: "Deskripsi Karung Jumbo 1",
+    name: "Karung Jumbo Circular 90x90x110 cm",
+    description: "Karung Jumbo Circular 90x90x110 cm",
     image: "/images/1.JPG",
   },
   {
-    name: "Karung Jumbo 2",
-    description: "Deskripsi Karung Jumbo 2",
+    name: "Karung Jumbo Baffle 90x90x110 cm",
+    description: "Karung Jumbo Baffle 90x90x110 cm",
     image: "/images/1.JPG",
   },
   {
-    name: "Karung Jumbo 3",
-    description: "Deskripsi Karung Jumbo 3",
+    name: "Pallet Plastik 110x110x15 cm",
+    description: "Pallet Plastik 110x110x15 cm",
     image: "/images/1.JPG",
   },
   {
-    name: "Karung Jumbo 1",
-    description: "Deskripsi Karung Jumbo 1",
+    name: "Pallet Plastik 120x100x15 cm",
+    description: "Pallet Plastik 120x100x15 cm",
     image: "/images/1.JPG",
   },
   {
-    name: "Karung Jumbo 2",
-    description: "Deskripsi Karung Jumbo 2",
+    name: "Plastik PP (Polypropylene)",
+    description: "Plastik PP (Polypropylene)",
     image: "/images/1.JPG",
   },
   {
-    name: "Karung Jumbo 3",
-    description: "Deskripsi Karung Jumbo 3",
+    name: "Plastik PE (Polyethylene)",
+    description: "Plastik PE (Polyethylene)",
     image: "/images/1.JPG",
   },
   {
-    name: "Karung Jumbo 1",
-    description: "Deskripsi Karung Jumbo 1",
+    name: "Plastik PET(Polyethylene Terephthalate)",
+    description: "Plastik PET(Polyethylene Terephthalate)",
     image: "/images/1.JPG",
   },
   {
-    name: "Karung Jumbo 2",
-    description: "Deskripsi Karung Jumbo 2",
-    image: "/images/1.JPG",
-  },
-  {
-    name: "Karung Jumbo 3",
-    description: "Deskripsi Karung Jumbo 3",
+    name: "Plastik ABS (Acrylonitrile Butadiene Styrene)",
+    description: "Plastik ABS (Acrylonitrile Butadiene Styrene)",
     image: "/images/1.JPG",
   },
 ];
@@ -258,73 +253,178 @@ function scrollToSection(sectionId: string) {
         </div>
       </div>
     </div>
-    <div class="flex flex-col gap-4 text-center" id="why-us">
-      <div>
-        <p class="text-xl">Tentang Kami</p>
+    <div class="flex flex-col p-8 bg-[#FAFAFA]" id="why-us">
+      <div class="flex justify-center">
+        <p
+          class="w-fit px-3 py-2 mb-8 border border-black rounded-3xl text-lg text-black helvetica"
+        >
+          Tentang Kami
+        </p>
       </div>
-      <p>
-        Kami adalah penyedia karung jumbo bekas berkualitas untuk kebutuhan
-        industri di Indonesia. Fokus kami adalah memberikan solusi pengemasan
-        yang hemat biaya namun tetap andal, terutama bagi sektor yang
-        membutuhkan kapasitas besar seperti manufaktur, logistik, pertanian, dan
-        tambang. Setiap karung yang kami jual telah melalui proses sortir untuk
-        memastikan kelayakan pakai dan efisiensi penggunaan di lapangan.
-      </p>
-      <div class="flex gap-4">
-        <div>
+      <div class="flex">
+        <p class="bg-[#DAFF95] p-8 rounded-t-3xl text-black basis-2/3 text-xl">
+          Kami adalah penyedia karung jumbo bekas serta produk berbahan dasar
+          plastik berkualitas untuk kebutuhan industri di Indonesia.
+          <br />
+          Fokus kami adalah memberikan solusi yang hemat biaya namun tetap
+          andal, terutama bagi sektor yang membutuhkan kapasitas dan jumlah
+          besar seperti manufaktur, logistik, pertanian, dan tambang.
+          <br />
+          Setiap produk yang kami jual telah melalui proses sortir untuk
+          memastikan higienitas, kelayakan pakai, dan durabilitas terbaik di
+          lapangan.
+        </p>
+        <div class="basis-1/3" />
+      </div>
+      <div class="flex">
+        <div class="bg-[] basis-2/3">
           <img
-            src="/images/1.jpg"
+            src="/images/4.JPG"
             alt="Karung Jumbo 1"
-            class="aspect-2/1 object-cover"
+            class="aspect-6/1 object-cover w-full"
           />
         </div>
-        <div class="basis-1/4">
-          <p>
+        <div class="basis-1/3">
+          <p class="h-full text-black bg-[#9DE345] p-8 rounded-r-3xl text-xl">
             Dengan pengalaman melayani berbagai jenis industri, kami memahami
             pentingnya ketersediaan stok, pengiriman tepat waktu, dan komunikasi
             yang cepat. Karena itu, kami siap membantu Anda menemukan solusi
-            yang sesuai dengan kebutuhan—baik untuk pembelian satuan maupun
+            yang sesuai dengan kebutuhan, baik untuk pembelian satuan maupun
             partai besar.
           </p>
         </div>
       </div>
-      <p>Kami telah melayani customer industri sebanyak</p>
-      <div class="w-full flex gap-4">
-        <div class="w-full">
-          <p>100+ Klien</p>
-          <p>Lorem Ipsum dolor sit amet</p>
+      <p class="text-black text-center text-3xl m-8">
+        Kami telah melayani pelanggan industri sebanyak
+      </p>
+      <div class="w-full flex gap-4 text-black text-center">
+        <div class="basis-1/2" />
+        <div
+          class="w-full bg-[#DAFF95] p-8 rounded-3xl basis-1/2 border-black border"
+        >
+          <p class="font-bold text-5xl">1000+ Ton</p>
+          <p class="mt-2 text-lg">Total Massa Produk Terjual</p>
         </div>
-        <div class="w-full">
-          <p>100+ Klien</p>
-          <p>Lorem Ipsum dolor sit amet</p>
+        <div
+          class="w-full bg-[#DAFF95] p-8 rounded-3xl basis-1/2 border-black border"
+        >
+          <p class="font-bold text-5xl">500+ Customer</p>
+          <p class="mt-2 text-lg">Total Pembeli Sejak Kami Berdiri</p>
         </div>
+        <div class="basis-1/2" />
       </div>
     </div>
-    <div class="flex flex-col" id="usage">
-      <p class="text-center">Cocok Digunakan untuk Sektor</p>
+    <div class="flex flex-col p-8 bg-[#FAFAFA]" id="usage">
+      <div class="flex justify-center">
+        <p
+          class="w-fit px-3 py-2 mb-8 border border-black rounded-3xl text-lg text-black helvetica"
+        >
+          Cocok Digunakan untuk Sektor
+        </p>
+      </div>
       <div class="grid grid-cols-2 gap-4">
-        <div class="col-span-2 bg-red-500">
-          <p>Pertanian</p>
+        <div class="col-span-2 bg-[#9DE345] rounded-3xl border border-black">
+          <img
+            :src="'/images/agri.jpg'"
+            alt="Testimonial Image"
+            class="w-full aspect-5/1 rounded-3xl object-cover"
+          />
+          <p class="text-black m-4 text-2xl helvetica font-semibold">
+            Pertanian & Perkebunan / Agrikultur
+          </p>
         </div>
-        <div class="col-span-1 bg-red-500">
-          <p>Pertanian</p>
+        <div
+          class="col-span-1 row-span-2 bg-[#9DE345] rounded-3xl border border-black"
+        >
+          <img
+            :src="'/images/const.webp'"
+            alt="Testimonial Image"
+            class="w-full aspect-3/1 rounded-3xl object-cover"
+          />
+          <p class="text-black m-4 text-2xl helvetica font-semibold">
+            Konstruksi & Material Bangunan
+          </p>
         </div>
-        <div class="col-span-1 bg-red-500">
-          <p>Pertanian</p>
+        <div class="col-span-1 bg-[#9DE345] rounded-3xl border border-black">
+          <img
+            :src="'/images/plast.jpg'"
+            alt="Testimonial Image"
+            class="w-full aspect-4/1 rounded-3xl object-cover"
+          />
+          <p class="text-black m-4 text-2xl helvetica font-semibold">
+            Daur Ulang Plastik
+          </p>
         </div>
-        <div class="col-span-2 bg-red-500">
-          <p>Pertanian</p>
+        <div
+          class="col-span-1 row-span-2 bg-[#9DE345] rounded-3xl border border-black"
+        >
+          <img
+            :src="'/images/fish.jpg'"
+            alt="Testimonial Image"
+            class="w-full aspect-3/1 rounded-3xl object-cover"
+          />
+          <p class="text-black m-4 text-2xl helvetica font-semibold">
+            Perikanan & Pakan Ternak
+          </p>
+        </div>
+        <div class="col-span-1 bg-[#9DE345] rounded-3xl border border-black">
+          <img
+            :src="'/images/coal.avif'"
+            alt="Testimonial Image"
+            class="w-full aspect-4/1 rounded-3xl object-cover"
+          />
+          <p class="text-black m-4 text-2xl helvetica font-semibold">
+            Komoditas Tambang dan Batu Bara
+          </p>
+        </div>
+        <div class="col-span-2 bg-[#9DE345] rounded-3xl border border-black">
+          <img
+            :src="'/images/chem.png'"
+            alt="Testimonial Image"
+            class="w-full aspect-5/1 rounded-3xl object-cover"
+          />
+          <p class="text-black m-4 text-2xl helvetica font-semibold">
+            Bahan Kimia & Manufaktur
+          </p>
         </div>
       </div>
     </div>
-    <div class="flex flex-col gap-4" id="product">
-      <Carousel :value="products" :numVisible="3" :numScroll="3">
+    <div class="flex flex-col gap-4 p-8 bg-[#FAFAFA] items-center" id="product">
+      <p
+        class="w-fit px-3 py-2 mb-8 border border-black rounded-3xl text-lg text-black helvetica"
+      >
+        Produk Kami
+      </p>
+      <Carousel
+        :value="products"
+        :numVisible="3"
+        :numScroll="3"
+        pt:itemlist:class=""
+      >
         <template #item="slotProps">
-          <p>{{ slotProps }}</p>
+          <div class="flex flex-col gap-4 items-center">
+            <img
+              :src="slotProps.data.image"
+              alt="Testimonial Image"
+              class="w-[480px] aspect-square rounded-3xl object-cover"
+            />
+            <div class="flex flex-col gap-2 text-black">
+              <p class="text-2xl font-semibold">{{ slotProps.data.name }}</p>
+              <p class="text-sm">{{ slotProps.data.description }}</p>
+            </div>
+          </div>
         </template>
       </Carousel>
     </div>
-    <div class="p-8 bg-[#FAFAFA]" id="testimonial">
+    <div
+      class="flex flex-col p-8 gap-8 bg-[#FAFAFA] items-center"
+      id="testimonial"
+    >
+      <p
+        class="w-fit px-3 py-2 mb-8 border border-black rounded-3xl text-lg text-black helvetica"
+      >
+        Testimoni Pelanggan
+      </p>
       <Carousel
         :value="testimonials"
         :numVisible="3"
@@ -350,7 +450,12 @@ function scrollToSection(sectionId: string) {
       <div class="flex flex-col items-center gap-4 text-black">
         <div class="flex flex-col gap-4 text-center p-8">
           <p class="text-5xl helvetica">Cocok dengan Produk Kami?</p>
-          <p class="text-5xl helvetica">Pesan Sekarang Juga!</p>
+          <div class="flex gap-3 justify-center">
+            <p class="text-5xl helvetica bg-[#DAFF95] rounded-3xl">
+              Pesan Sekarang
+            </p>
+            <p class="text-5xl helvetica">Juga!</p>
+          </div>
         </div>
         <Button class="!rounded-3xl !m-8">
           <div class="flex gap-2 items-center">
@@ -359,7 +464,12 @@ function scrollToSection(sectionId: string) {
           </div>
         </Button>
         <p class="text-lg">atau</p>
-        <p class="text-5xl helvetica">Datang Langsung ke Tempat Kami</p>
+        <div class="flex gap-3 justify-center">
+          <p class="text-5xl helvetica bg-[#DAFF95] rounded-3xl">
+            Datang Langsung
+          </p>
+          <p class="text-5xl helvetica">ke Tempat Kami</p>
+        </div>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63301.749251788024!2d112.52613881637731!3d-7.425427599999992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78095b5625e06b%3A0x105a547091935f63!2sGudang%20Karung%20Jumbo!5e0!3m2!1sen!2sid!4v1749036329545!5m2!1sen!2sid"
           height="480"
