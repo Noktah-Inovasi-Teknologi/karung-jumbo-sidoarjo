@@ -10,12 +10,23 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxt/fonts",
     "@nuxt/scripts",
+    "nuxt-viewport",
   ],
   primevue: {
     options: {
       theme: {
         preset: Aura,
       },
+    },
+  },
+  viewport: {
+    breakpoints: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536,
     },
   },
 });
