@@ -19,6 +19,11 @@ export default defineNuxtConfig({
       },
     },
   },
+  tailwindcss: {
+    configPath: "tailwind.config.js",
+    cssPath: "assets/css/tailwind.css",
+    exposeConfig: true,
+  },
   viewport: {
     breakpoints: {
       xs: 320,
