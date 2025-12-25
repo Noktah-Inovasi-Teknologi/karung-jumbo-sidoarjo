@@ -1,22 +1,24 @@
+import tailwindcss from "@tailwindcss/vite";
+
 import Aura from "@primeuix/themes/aura";
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: "2025-05-15",
+  compatibilityDate: "2025-07-15",
+  css: ["./app/assets/css/main.css"],
   devtools: { enabled: true },
   modules: [
-    "@primevue/nuxt-module",
-    "@nuxtjs/tailwindcss",
     "@nuxt/icon",
     "@nuxt/fonts",
     "@nuxt/scripts",
     "nuxt-viewport",
+    "@primevue/nuxt-module",
   ],
-    nitro: {
-    preset: 'cloudflare-module',
+  nitro: {
+    preset: "cloudflare-module",
     cloudflare: {
       deployConfig: true,
       nodeCompat: true,
-    }
+    },
   },
   primevue: {
     options: {
@@ -24,11 +26,6 @@ export default defineNuxtConfig({
         preset: Aura,
       },
     },
-  },
-  tailwindcss: {
-    configPath: "tailwind.config.js",
-    cssPath: "assets/css/tailwind.css",
-    exposeConfig: true,
   },
   viewport: {
     breakpoints: {
@@ -39,5 +36,8 @@ export default defineNuxtConfig({
       xl: 1280,
       xxl: 1536,
     },
+  },
+  vite: {
+    plugins: [tailwindcss()],
   },
 });

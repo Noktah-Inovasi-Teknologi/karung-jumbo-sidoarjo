@@ -176,9 +176,9 @@ function scrollToSection(sectionId: string) {
           </p>
         </template>
       </Menubar>
-      <Button v-if="$viewport.isGreaterThan('sm')" class="!rounded-3xl">
+      <Button v-if="$viewport.isGreaterThan('sm')" class="rounded-3xl!">
         <div class="flex gap-2 items-center">
-          <Icon class="!w-6 !h-6" name="uil:whatsapp" />
+          <Icon class="w-6! h-6!" name="uil:whatsapp" />
           <p>Hubungi Kami</p>
         </div>
       </Button>
@@ -189,12 +189,12 @@ function scrollToSection(sectionId: string) {
         <p class="text-xl helvetica sm:text-5xl">Siap Pakai untuk Industri</p>
         <div class="flex gap-1 sm:gap-2">
           <p
-            class="text-lg sm:text-5xl helvetica border-1 bg-[#DAFF95] py-2 px-3 rounded-3xl"
+            class="text-lg sm:text-5xl helvetica border bg-[#DAFF95] py-2 px-3 rounded-3xl"
           >
             Biaya Hemat
           </p>
           <p
-            class="text-lg sm:text-5xl helvetica border-1 bg-[#DAFF95] py-2 px-3 rounded-3xl"
+            class="text-lg sm:text-5xl helvetica border bg-[#DAFF95] py-2 px-3 rounded-3xl"
           >
             Tetap Kuat
           </p>
@@ -205,7 +205,7 @@ function scrollToSection(sectionId: string) {
         class="grid grid-cols-1 sm:grid-cols-3 items-center justify-center gap-8 w-full"
       >
         <div
-          class="relative aspect-[2/1] sm:col-span-3 w-full sm:w-[75%] mx-auto rounded-3xl border border-black"
+          class="relative aspect-2/1 sm:col-span-3 w-full sm:w-[75%] mx-auto rounded-3xl border border-black"
         >
           <img
             src="/images/2.JPG"
@@ -229,14 +229,14 @@ function scrollToSection(sectionId: string) {
               class="bg-white w-8 h-8 sm:w-20 sm:h-20 border border-black flex items-center justify-center rounded-full"
             >
               <Icon
-                class="!w-4 !h-4 sm:!w-10 sm:!h-10 text-black"
+                class="w-4! h-4! sm:w-10! sm:h-10! text-black"
                 name="uil:truck"
               />
             </div>
           </div>
         </div>
         <div
-          class="relative aspect-[2/1] sm:aspect-[1/2] rounded-3xl border-1 border-black"
+          class="relative aspect-2/1 sm:aspect-1/2 rounded-3xl border border-black"
         >
           <img
             src="/images/3.JPG"
@@ -259,32 +259,32 @@ function scrollToSection(sectionId: string) {
             class="bg-[#DAFF95] flex flex-col border-t border-black text-black text-xs p-4 rounded-3xl"
           >
             <div class="flex gap-2 items-center">
-              <Icon class="!w-6 !h-6" name="uil:check" />
+              <Icon class="w-6! h-6!" name="uil:check" />
               <p>Ukuran standar industri (1 ton+)</p>
             </div>
             <div class="flex gap-2 items-center">
-              <Icon class="!w-6 !h-6" name="uil:check" />
+              <Icon class="w-6! h-6!" name="uil:check" />
               <p>Kondisi layak pakai & bersih</p>
             </div>
             <div class="flex gap-2 items-center">
-              <Icon class="!w-6 !h-6" name="uil:check" />
+              <Icon class="w-6! h-6!" name="uil:check" />
               <p>Siap dikirim dalam jumlah besar</p>
             </div>
             <div class="flex gap-2 items-center">
-              <Icon class="!w-6 !h-6" name="uil:check" />
+              <Icon class="w-6! h-6!" name="uil:check" />
               <p>Lebih hemat dibanding karung baru</p>
             </div>
           </div>
         </div>
         <div
-          class="border-1 border-black sm:col-span-3 w-full sm:w-[75%] mx-auto bg-[#DAFF95] rounded-3xl p-4 sm:p-8 justify-between"
+          class="border border-black sm:col-span-3 w-full sm:w-[75%] mx-auto bg-[#DAFF95] rounded-3xl p-4 sm:p-8 justify-between"
         >
           <div class="flex flex-col gap-4 justify-between h-full">
             <p class="text-xl text-black">Bukan yang Anda cari?</p>
-            <Button @click="scrollToSection('product')" class="!rounded-3xl">
+            <Button @click="scrollToSection('product')" class="rounded-3xl!">
               <div class="flex gap-2 items-center">
                 <p>Cek Produk Lainnya</p>
-                <Icon class="!w-6 !h-6" name="uil:arrow-right" />
+                <Icon class="w-6! h-6!" name="uil:arrow-right" />
               </div>
             </Button>
           </div>
@@ -378,7 +378,7 @@ function scrollToSection(sectionId: string) {
           <img
             :src="'/images/agri.jpg'"
             alt="Testimonial Image"
-            class="w-full aspect-[1/1] xs:aspect-[5/1] rounded-3xl object-cover border-b border-black"
+            class="w-full aspect-square xs:aspect-[5/1] rounded-3xl object-cover border-b border-black"
           />
           <p
             class="text-black m-4 text-normal xs:text-2xl helvetica font-semibold"
@@ -392,7 +392,7 @@ function scrollToSection(sectionId: string) {
           <img
             :src="'/images/const.webp'"
             alt="Testimonial Image"
-            class="w-full aspect-[1/1] xs:aspect-[3/1] rounded-3xl object-cover border-b border-black"
+            class="w-full aspect-square xs:aspect-[3/1] rounded-3xl object-cover border-b border-black"
           />
           <p class="text-black m-4 text-normal helvetica font-semibold">
             Konstruksi & Material Bangunan
@@ -402,7 +402,7 @@ function scrollToSection(sectionId: string) {
           <img
             :src="'/images/plast.jpg'"
             alt="Testimonial Image"
-            class="w-full aspect-[1/1] xs:aspect-[4/1] rounded-3xl object-cover border-b border-black"
+            class="w-full aspect-square xs:aspect-[4/1] rounded-3xl object-cover border-b border-black"
           />
           <p
             class="text-black m-4 text-normal xs:text-2xl helvetica font-semibold"
@@ -416,7 +416,7 @@ function scrollToSection(sectionId: string) {
           <img
             :src="'/images/fish.jpg'"
             alt="Testimonial Image"
-            class="w-full aspect-[1/1] xs:aspect-[3/1] rounded-3xl object-cover border-b border-black"
+            class="w-full aspect-square xs:aspect-[3/1] rounded-3xl object-cover border-b border-black"
           />
           <p
             class="text-black m-4 text-normal xs:text-2xl helvetica font-semibold"
@@ -428,7 +428,7 @@ function scrollToSection(sectionId: string) {
           <img
             :src="'/images/coal.avif'"
             alt="Testimonial Image"
-            class="w-full aspect-[1/1] xs:aspect-[4/1] rounded-3xl object-cover border-b border-black"
+            class="w-full aspect-square xs:aspect-[4/1] rounded-3xl object-cover border-b border-black"
           />
           <p
             class="text-black m-4 text-normal xs:text-2xl helvetica font-semibold"
@@ -442,7 +442,7 @@ function scrollToSection(sectionId: string) {
           <img
             :src="'/images/chem.png'"
             alt="Testimonial Image"
-            class="w-full aspect-[1/1] xs:aspect-[5/1] rounded-3xl object-cover border-b border-black"
+            class="w-full aspect-square xs:aspect-[5/1] rounded-3xl object-cover border-b border-black"
           />
           <p
             class="text-black m-4 text-normal xs:text-2xl helvetica font-semibold"
@@ -532,9 +532,9 @@ function scrollToSection(sectionId: string) {
             <p class="text-xl sm:text-5xl helvetica">Juga!</p>
           </div>
         </div>
-        <Button class="!rounded-3xl !m-8">
+        <Button class="rounded-3xl! m-8!">
           <div class="flex gap-2 items-center">
-            <Icon class="!w-6 !h-6" name="uil:whatsapp" />
+            <Icon class="w-6! h-6!" name="uil:whatsapp" />
             <p>Pesan Sekarang</p>
           </div>
         </Button>
@@ -560,7 +560,7 @@ function scrollToSection(sectionId: string) {
     </div>
     <div class="w-full flex bg-[#FAFAFA] pt-8 px-8" id="footer">
       <div
-        class="w-full flex flex-col md:flex-row gap-4 xs:flex-row justify-between p-8 bg-[#DAFF95] rounded-t-3xl border-t-1 border-x-1 border-black text-black"
+        class="w-full flex flex-col md:flex-row gap-4 xs:flex-row justify-between p-8 bg-[#DAFF95] rounded-t-3xl border-t border-x border-black text-black"
       >
         <div class="text-xs">
           <p class="font-semibold text-lg">CV Imron Jaya</p>
