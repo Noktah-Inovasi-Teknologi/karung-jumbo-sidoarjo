@@ -4,7 +4,6 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-05-15",
   devtools: { enabled: true },
   modules: [
-    "@nuxthub/core",
     "@primevue/nuxt-module",
     "@nuxtjs/tailwindcss",
     "@nuxt/icon",
@@ -12,6 +11,13 @@ export default defineNuxtConfig({
     "@nuxt/scripts",
     "nuxt-viewport",
   ],
+    nitro: {
+    preset: 'cloudflare-module',
+    cloudflare: {
+      deployConfig: true,
+      nodeCompat: true,
+    }
+  },
   primevue: {
     options: {
       theme: {
