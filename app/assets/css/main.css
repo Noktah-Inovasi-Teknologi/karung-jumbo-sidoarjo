@@ -1,1 +1,416 @@
+/* ==========================================================================
+   Karung Jumbo Sidoarjo — Design System
+   Tailwind CSS v4 (@theme) + Nuxt UI v4 token layer.
+
+   Everything visual in this site resolves to a token defined below. Change a
+   token here and the whole site follows; never hardcode a hex value in a
+   component.
+   ========================================================================== */
+
 @import "tailwindcss";
+@import "@nuxt/ui";
+
+/* --------------------------------------------------------------------------
+   1. FOUNDATION TOKENS
+   -------------------------------------------------------------------------- */
+@theme {
+  /* --- 1.1 Breakpoints -----------------------------------------------------
+     `xs` and `3xl` are additions; sm–2xl match the Tailwind defaults so stock
+     utilities keep behaving as documented. */
+  --breakpoint-xs: 20rem;   /* 320px  — small/legacy phones */
+  --breakpoint-3xl: 120rem; /* 1920px — large desktop       */
+
+  /* --- 1.2 Brand colour: "brand" (acid lime) -------------------------------
+     Anchored on the two colours the brand already used:
+       brand-200 = #DAFF95 (panel fill)   brand-400 = #9DE345 (accent)
+     The rest of the ramp is interpolated on the same hue family so tints and
+     shades stay in the family instead of drifting green/yellow. */
+  --color-brand-50:  #f7ffeb;
+  --color-brand-100: #ebffcc;
+  --color-brand-200: #daff95;
+  --color-brand-300: #bef769;
+  --color-brand-400: #9de345;
+  --color-brand-500: #80c92c;
+  --color-brand-600: #63a31f;
+  --color-brand-700: #4d7f1a;
+  --color-brand-800: #3d6218;
+  --color-brand-900: #324f17;
+  --color-brand-950: #1b2d0b;
+
+  /* --- 1.3 Neutral colour: "ink" ------------------------------------------
+     ink-50 (#fafafa) is the page ground the site already used. ink-950 is the
+     hairline/typographic black that gives the layout its hard-edged look. */
+  --color-ink-50:  #fafafa;
+  --color-ink-100: #f4f4f4;
+  --color-ink-200: #e6e6e6;
+  --color-ink-300: #d4d4d4;
+  --color-ink-400: #a3a3a3;
+  --color-ink-500: #737373;
+  --color-ink-600: #525252;
+  --color-ink-700: #404040;
+  --color-ink-800: #262626;
+  --color-ink-900: #171717;
+  --color-ink-950: #0a0a0a;
+
+  /* --- 1.4 Typefaces -------------------------------------------------------
+     The old design asked for "Helvetica Neue", which does not exist on Windows
+     or Android — those visitors silently fell back to Arial, so the site
+     rendered differently per platform. Inter / Inter Tight are self-hosted by
+     @nuxt/fonts, so everyone now sees the same thing.
+
+     The fallback is `system-ui` rather than the old Helvetica/Arial chain:
+     system-ui resolves to SF Pro / Segoe UI / Roboto, all of which sit closer
+     to Inter than Arial does. Naming undownloadable system fonts here also made
+     nuxt-og-image try to fetch them for the OG card and warn on every build —
+     it reads these Tailwind font vars to decide what to embed. */
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Inter Tight", "Inter", system-ui, sans-serif;
+
+  /* --- 1.5 Type scale ------------------------------------------------------
+     Fluid: each step interpolates between its mobile and desktop size, which
+     replaces the old `text-xl sm:text-5xl` step-jumps that left 641px–1023px
+     viewports looking unbalanced. */
+  --text-display-2xl: clamp(2.25rem, 1.25rem + 5vw, 5rem);
+  --text-display-2xl--line-height: 1.02;
+  --text-display-2xl--letter-spacing: -0.03em;
+  --text-display-2xl--font-weight: 700;
+
+  --text-display-xl: clamp(1.875rem, 1.15rem + 3.6vw, 4rem);
+  --text-display-xl--line-height: 1.05;
+  --text-display-xl--letter-spacing: -0.025em;
+  --text-display-xl--font-weight: 700;
+
+  --text-display-lg: clamp(1.625rem, 1.15rem + 2.4vw, 3rem);
+  --text-display-lg--line-height: 1.1;
+  --text-display-lg--letter-spacing: -0.02em;
+  --text-display-lg--font-weight: 600;
+
+  --text-display-md: clamp(1.375rem, 1.1rem + 1.4vw, 2.25rem);
+  --text-display-md--line-height: 1.15;
+  --text-display-md--letter-spacing: -0.015em;
+  --text-display-md--font-weight: 600;
+
+  --text-display-sm: clamp(1.125rem, 1rem + 0.7vw, 1.5rem);
+  --text-display-sm--line-height: 1.25;
+  --text-display-sm--letter-spacing: -0.01em;
+  --text-display-sm--font-weight: 600;
+
+  --text-body-lg: clamp(1rem, 0.95rem + 0.3vw, 1.1875rem);
+  --text-body-lg--line-height: 1.6;
+
+  --text-body: clamp(0.9375rem, 0.9rem + 0.2vw, 1.0625rem);
+  --text-body--line-height: 1.65;
+
+  --text-body-sm: clamp(0.875rem, 0.855rem + 0.1vw, 0.9375rem);
+  --text-body-sm--line-height: 1.6;
+
+  --text-eyebrow: clamp(0.75rem, 0.72rem + 0.15vw, 0.875rem);
+  --text-eyebrow--line-height: 1.2;
+  --text-eyebrow--letter-spacing: 0.08em;
+  --text-eyebrow--font-weight: 600;
+
+  /* --- 1.6 Radii -----------------------------------------------------------
+     The old markup repeated `rounded-3xl` on everything from small chips to
+     full-bleed panels. These name the intent instead of the pixel value. */
+  --radius-control: 9999px; /* buttons, chips, pills          */
+  --radius-card: 1.5rem;    /* product / sector / stat cards   */
+  --radius-panel: 2rem;     /* large full-bleed layout panels  */
+
+  /* --- 1.7 Elevation -------------------------------------------------------
+     Hard offset shadows rather than blurs — consistent with the 1px hairline
+     that defines every surface in this design. The colour comes from a
+     semantic token: a near-black shadow would be invisible in dark mode. */
+  --shadow-hard-sm: 2px 2px 0 0 var(--shadow-color);
+  --shadow-hard: 4px 4px 0 0 var(--shadow-color);
+  --shadow-hard-lg: 8px 8px 0 0 var(--shadow-color);
+
+  /* --- 1.8 Layout rhythm ---------------------------------------------------
+     Registered in the --spacing-* namespace so they work everywhere the
+     spacing scale does: py-section, gap-grid, p-panel, ...
+
+     `section` is HALF the intended rhythm between sections. Adjacent sections
+     each contribute their own padding, so the visible gap is always double
+     this value — previously that silently produced 98px on mobile and 208px on
+     a wide desktop, far past the ~64/112px a landing page wants. */
+  --spacing-section: clamp(1.75rem, 1.25rem + 2.5vw, 3.5rem);
+  --spacing-gutter: clamp(1rem, 0.5rem + 2.25vw, 2.5rem);
+  --spacing-stack: clamp(1.5rem, 1rem + 1.75vw, 3rem);
+
+  /* Interior padding for full-bleed panels (about, contact, footer). One
+     ladder replaces the three ad-hoc ones that had grown up per component:
+     `p-6 sm:p-8 lg:p-12`, `p-6 sm:p-8`, `p-6 sm:p-10`. */
+  --spacing-panel: clamp(1.5rem, 1rem + 2vw, 2.5rem);
+
+  /* Gap between cards in a grid. Was a flat `gap-4`, which stayed 16px even on
+     a 1536px canvas and made wide layouts feel cramped. */
+  --spacing-grid: clamp(1rem, 0.75rem + 0.75vw, 1.5rem);
+
+  /* --- 1.9 Motion ---------------------------------------------------------- */
+  --ease-out-brand: cubic-bezier(0.22, 1, 0.36, 1);
+  --default-transition-duration: 200ms;
+  --default-transition-timing-function: var(--ease-out-brand);
+}
+
+/* --------------------------------------------------------------------------
+   2. SEMANTIC LAYER  (maps foundation tokens onto the Nuxt UI contract)
+
+   Nuxt UI components read --ui-*. Rebinding them here is what makes every
+   Nuxt UI component inherit this design system without per-component patching.
+   -------------------------------------------------------------------------- */
+:root {
+  /* Nuxt UI derives the whole stock radius scale from this one value
+     (rounded-sm = --ui-radius, rounded-md = 1.5x, ... rounded-3xl = 6x), so it
+     is kept at a conservative base. Site markup should use the intent-named
+     radii instead — rounded-control / rounded-card / rounded-panel — which are
+     independent of this scale. */
+  --ui-radius: 0.5rem;
+  /* Content caps at the 2xl breakpoint (1536px). Past that the layout stops
+     growing and the surplus becomes empty margin, so a 2560px monitor gets a
+     centred column rather than text stretched across the whole display. */
+  --ui-container: 96rem;
+  --ui-header-height: 5rem;
+}
+
+/* Light — the shipped brand appearance. */
+:root,
+.light {
+  /* Accent. Nuxt UI would otherwise pick shade 500; the brand identity colour
+     is 400, so it is pinned here. */
+  --ui-primary: var(--color-brand-400);
+  /* Nuxt UI generates --ui-<color> for every alias except `neutral`, so the
+     solid neutral surface is defined here. */
+  --ui-neutral: var(--color-ink-950);
+
+  --ui-bg: var(--color-ink-50);
+  --ui-bg-muted: var(--color-ink-100);
+  --ui-bg-elevated: var(--color-brand-200);
+  --ui-bg-accented: var(--color-brand-400);
+  --ui-bg-inverted: var(--color-ink-950);
+
+  --ui-text-dimmed: var(--color-ink-400);
+  --ui-text-muted: var(--color-ink-600);
+  --ui-text-toned: var(--color-ink-700);
+  --ui-text: var(--color-ink-900);
+  --ui-text-highlighted: var(--color-ink-950);
+  --ui-text-inverted: var(--color-ink-50);
+
+  /* The signature hairline. Deliberately near-black, not a grey. */
+  --ui-border: var(--color-ink-950);
+  --ui-border-muted: var(--color-ink-300);
+  --ui-border-accented: var(--color-ink-950);
+  --ui-border-inverted: var(--color-ink-950);
+
+  /* Brand surfaces. Components reference these rather than a literal brand
+     shade, which is what lets the lime panels become dark olive in dark mode
+     instead of staying a glaring block of #daff95. */
+  --surface-brand: var(--color-brand-200);
+  --surface-brand-strong: var(--color-brand-400);
+
+  /* The inline "highlighter" treatment on hero words. */
+  --marker-bg: var(--color-brand-200);
+  --marker-text: var(--color-ink-950);
+
+  --shadow-color: var(--color-ink-950);
+  --focus-ring: var(--color-ink-950);
+}
+
+/* Dark. Reachable via the header toggle, and the default for visitors whose
+   OS asks for it (`colorMode.preference: "system"`). */
+.dark {
+  --ui-primary: var(--color-brand-300);
+  --ui-neutral: var(--color-ink-50);
+
+  --ui-bg: var(--color-ink-950);
+  --ui-bg-muted: var(--color-ink-900);
+  --ui-bg-elevated: var(--color-ink-800);
+  --ui-bg-accented: var(--color-brand-900);
+  --ui-bg-inverted: var(--color-ink-50);
+
+  --ui-text-dimmed: var(--color-ink-500);
+  --ui-text-muted: var(--color-ink-400);
+  --ui-text-toned: var(--color-ink-300);
+  --ui-text: var(--color-ink-100);
+  --ui-text-highlighted: #ffffff;
+  --ui-text-inverted: var(--color-ink-950);
+
+  /* Light mode uses a pure-black hairline. Its dark counterpart has to stay
+     assertive enough to separate a dark-olive panel from a near-black page —
+     but brand lime on every card edge is far too loud, so this is neutral. */
+  --ui-border: var(--color-ink-600);
+  --ui-border-muted: var(--color-ink-800);
+  --ui-border-accented: var(--color-brand-400);
+  --ui-border-inverted: var(--color-ink-50);
+
+  /* Dark olive keeps the lime identity without the glare of a light panel. */
+  --surface-brand: var(--color-brand-950);
+  --surface-brand-strong: var(--color-brand-900);
+
+  /* The marker stays a genuine highlighter — bright lime, dark text. */
+  --marker-bg: var(--color-brand-400);
+  --marker-text: var(--color-ink-950);
+
+  /* A black offset shadow is invisible here; the accent reads as intentional. */
+  --shadow-color: var(--color-brand-400);
+  --focus-ring: var(--color-brand-300);
+}
+
+/* --------------------------------------------------------------------------
+   3. BASE
+   -------------------------------------------------------------------------- */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Keeps in-page anchor targets clear of the sticky header. */
+    scroll-padding-top: calc(var(--ui-header-height) + 1rem);
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--ui-bg);
+    color: var(--ui-text);
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    line-height: var(--text-body--line-height);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    color: var(--ui-text-highlighted);
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Anchor targets must clear the sticky header. `scroll-margin-top` (rather
+     than only `scroll-padding-top` on html) is what the Nuxt router reads when
+     it scrolls to a hash. */
+  :where(section, div)[id] {
+    scroll-margin-top: calc(var(--ui-header-height) + 1rem);
+  }
+
+  ::selection {
+    background-color: var(--color-brand-400);
+    color: var(--color-ink-950);
+  }
+
+  /* A single, visible, brand-consistent focus ring for every interactive
+     element. The previous build had no focus styling at all. */
+  :where(a, button, [role="button"], input, textarea, select, summary, [tabindex]):focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. COMPOSABLE UTILITIES
+
+   Named recipes for patterns that repeat across sections. These are real
+   Tailwind utilities (@utility), so they participate in variants —
+   `md:panel`, `hover:shadow-hard`, and so on.
+   -------------------------------------------------------------------------- */
+
+/* The 1px near-black hairline that outlines every surface in this design. */
+@utility hairline {
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--ui-border);
+}
+
+/* Base surface: hairline + card radius. Compose with a bg-* utility. */
+@utility panel {
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--ui-border);
+  border-radius: var(--radius-card);
+}
+
+/* Large layout surface. */
+@utility panel-lg {
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--ui-border);
+  border-radius: var(--radius-panel);
+}
+
+/* Section wrapper: consistent vertical rhythm + horizontal gutter. */
+@utility section {
+  padding-block: var(--spacing-section);
+  padding-inline: var(--spacing-gutter);
+}
+
+/* Constrains content on very wide screens. The previous layout was full-bleed
+   at every width, so on a 1920px display text ran the full monitor. */
+@utility shell {
+  width: 100%;
+  max-width: var(--ui-container);
+  margin-inline: auto;
+}
+
+/* The pill label that introduces each section. */
+@utility eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--ui-border);
+  border-radius: var(--radius-control);
+  font-family: var(--font-display);
+  font-size: var(--text-eyebrow);
+  font-weight: var(--text-eyebrow--font-weight);
+  letter-spacing: var(--text-eyebrow--letter-spacing);
+  text-transform: uppercase;
+  color: var(--ui-text-highlighted);
+}
+
+/* The brand-tinted panel fill. Deliberately sets only `background-color` so
+   text utilities (text-muted, text-highlighted) still win on top of it —
+   the default foreground already contrasts in both modes. */
+@utility surface-brand {
+  background-color: var(--surface-brand);
+}
+
+/* The heavier brand fill, for panels that need to sit above `surface-brand`. */
+@utility surface-brand-strong {
+  background-color: var(--surface-brand-strong);
+}
+
+/* Inline highlight — the lime "marker pen" treatment on hero words. */
+@utility marker {
+  display: inline-block;
+  padding-inline: 0.75rem;
+  padding-block: 0.125rem;
+  border-radius: var(--radius-control);
+  background-color: var(--marker-bg);
+  color: var(--marker-text);
+}
+
+/* Lifts a surface on hover using the hard-shadow elevation tokens. */
+@utility lift {
+  transition-property: transform, box-shadow;
+  transition-duration: var(--default-transition-duration);
+  transition-timing-function: var(--ease-out-brand);
+
+  &:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: var(--shadow-hard);
+  }
+}

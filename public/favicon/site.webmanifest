@@ -1,0 +1,29 @@
+{
+  "name": "Gudang Karung Jumbo Sidoarjo",
+  "short_name": "Karung Jumbo",
+  "description": "Penyedia karung jumbo bekas, sling bag, pallet plastik, dan plastik PE untuk kebutuhan industri.",
+  "lang": "id",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "theme_color": "#fafafa",
+  "background_color": "#fafafa",
+  "icons": [
+    {
+      "src": "/favicon/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

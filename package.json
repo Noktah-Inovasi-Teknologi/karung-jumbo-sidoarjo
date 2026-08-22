@@ -1,41 +1,45 @@
 {
-  "name": "nuxt-app",
+  "name": "karung-jumbo-sidoarjo",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": "^22.19.0 || ^24.11.0 || >=26.0.0"
+  },
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
+    "typecheck": "nuxt typecheck",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/fonts": "0.12.1",
-    "@nuxt/icon": "2.1.0",
-    "@nuxt/scripts": "0.11.8",
-    "@nuxtjs/seo": "^3.2.2",
-    "@nuxtjs/sitemap": "^7.4.7",
-    "@primeuix/themes": "^1.1.1",
-    "@tailwindcss/vite": "^4.1.17",
-    "@unhead/vue": "^2.0.3",
-    "nuxt": "^4.2.1",
-    "nuxt-viewport": "2.3.1",
-    "primevue": "^4.5.4",
-    "tailwindcss": "^4.1.17",
-    "typescript": "^5.6.3",
-    "vue": "^3.5.15",
-    "vue-router": "^4.5.1"
+    "@nuxt/image": "^2.1.0",
+    "@nuxt/ui": "^4.10.0",
+    "@nuxtjs/seo": "^5.3.14",
+    "nuxt": "^4.5.2",
+    "vue": "^3.5.41",
+    "vue-router": "^5.2.0"
+  },
+  "devDependencies": {
+    "@iconify-json/uil": "^1.2.3",
+    "@iconify-json/uim": "^1.2.3",
+    "@takumi-rs/core": "^2.10.0",
+    "@takumi-rs/wasm": "^2.10.0",
+    "@types/node": "^26.2.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^6.0.3",
+    "vue-tsc": "^3.3.10",
+    "wrangler": "^4.125.0"
   },
   "packageManager": "pnpm@10.7.0+sha512.6b865ad4b62a1d9842b61d674a393903b871d9244954f652b8842c2b553c72176b278f64c463e52d40fff8aba385c235c8c9ecf5cc7de4fd78b8bb6d49633ab6",
-  "devDependencies": {
-    "@nuxtjs/tailwindcss": "7.0.0-beta.0",
-    "@primevue/nuxt-module": "^4.5.4",
-    "@types/google.maps": "^3.58.1",
-    "wrangler": "^4.18.0"
-  },
   "pnpm": {
     "onlyBuiltDependencies": [
-      "@tailwindcss/oxide"
+      "@tailwindcss/oxide",
+      "esbuild",
+      "sharp",
+      "unrs-resolver",
+      "workerd"
     ]
   }
 }
