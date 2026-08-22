@@ -23,7 +23,7 @@ export default defineNuxtConfig({
       nodeCompat: true,
     },
     prerender: {
-      routes: ["/", "/robots.txt"],
+      routes: ["/", "/robots.txt", "/llms.txt"],
       crawlLinks: true,
     },
   },
