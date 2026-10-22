@@ -48,7 +48,7 @@ withDefaults(
           margin-bottom: 40px;
         "
       >
-        CV IMRON JAYA
+        GUDANG KARUNG JUMBO
       </div>
 
       <div

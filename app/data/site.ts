@@ -50,7 +50,7 @@ function whatsappLink(message: string): string {
 }
 
 export const company = {
-  legalName: "CV Imron Jaya",
+  legalName: "Gudang Karung Jumbo",
   name: "Gudang Karung Jumbo Sidoarjo",
   tagline: "Karung Jumbo Bekas Siap Pakai untuk Industri",
   phone: "+62 822-3224-2999",
