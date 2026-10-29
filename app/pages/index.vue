@@ -49,7 +49,6 @@ defineOgImage("Default", {
 useSchemaOrg([
   defineLocalBusiness({
     name: company.name,
-    legalName: company.legalName,
     description,
     slogan: company.tagline,
     telephone: `+${company.phone.replace(/\D/g, "").replace(/^0/, "62")}`,

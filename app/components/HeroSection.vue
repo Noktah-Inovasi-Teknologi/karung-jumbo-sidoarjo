@@ -17,7 +17,7 @@ const highlightIcons = [
            75%-centred CTA, so no two rows lined up. -->
       <div class="grid items-center gap-6 lg:grid-cols-12 lg:gap-10">
         <div class="flex flex-col items-start gap-5 lg:col-span-6">
-          <p class="eyebrow">{{ company.legalName }} &middot; Sidoarjo</p>
+          <p class="eyebrow">{{ company.name }}</p>
 
           <h1 class="text-display-xl">
             Karung Jumbo Bekas

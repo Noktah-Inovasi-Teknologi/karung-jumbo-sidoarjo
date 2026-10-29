@@ -29,7 +29,7 @@ export default defineEventHandler((event) => {
 
   const body = `# ${company.name}
 
-> ${company.tagline}. ${company.legalName} menjual karung jumbo (FIBC/bulk bag) bekas siap pakai, sling bag, pallet plastik, dan plastik PE untuk kebutuhan industri di Indonesia.
+> ${company.tagline}. ${company.name} menjual karung jumbo (FIBC/bulk bag) bekas siap pakai, sling bag, pallet plastik, dan plastik PE untuk kebutuhan industri di Indonesia.
 
 ## Tentang
 
@@ -40,7 +40,6 @@ ${stats.map((stat) => `- ${stat.value} — ${stat.label}`).join("\n")}
 ## Kontak
 
 - Nama usaha: ${company.name}
-- Badan usaha: ${company.legalName}
 - Alamat: ${address}
 - Koordinat: ${company.geo.latitude}, ${company.geo.longitude}
 - WhatsApp/telepon: ${company.phone}

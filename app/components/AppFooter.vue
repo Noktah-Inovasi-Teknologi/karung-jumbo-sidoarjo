@@ -13,10 +13,7 @@ const year = new Date().getFullYear();
            would otherwise widen its column past the footer panel. -->
       <div class="grid gap-8 md:grid-cols-3 [&>*]:min-w-0">
         <div class="flex flex-col gap-4">
-          <div>
-            <p class="font-display text-display-sm">{{ company.legalName }}</p>
-            <p class="font-display text-display-sm">{{ company.name }}</p>
-          </div>
+          <p class="font-display text-display-sm">{{ company.name }}</p>
           <!-- WhatsApp rather than a `tel:` link: the number is the same, but
                opening a chat is what customers actually use here, and it works
                from desktop where a dialer does not. -->
@@ -80,7 +77,7 @@ const year = new Date().getFullYear();
       </div>
 
       <p class="mt-8 border-t border-default pt-6 text-body-sm text-muted">
-        &copy; 2025 - {{ year }} {{ company.legalName }}. Seluruh hak cipta
+        &copy; 2025 - {{ year }} {{ company.name }}. Seluruh hak cipta
         dilindungi.
       </p>
     </div>

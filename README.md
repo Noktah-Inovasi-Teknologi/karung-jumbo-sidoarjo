@@ -1,7 +1,7 @@
 # Gudang Karung Jumbo Sidoarjo
 
-Marketing site for **Gudang Karung Jumbo** — karung jumbo bekas, sling bag, pallet
-plastik, and plastik PE for Indonesian industry.
+Marketing site selling karung jumbo bekas, sling bag, pallet plastik, and
+plastik PE to Indonesian industry.
 
 Nuxt 4 · Nuxt UI 4 · Tailwind CSS 4 · deployed to Cloudflare Workers.
 

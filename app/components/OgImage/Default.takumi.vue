@@ -37,23 +37,6 @@ withDefaults(
       <div
         style="
           display: flex;
-          align-self: flex-start;
-          border: 2px solid #0a0a0a;
-          border-radius: 999px;
-          padding: 10px 24px;
-          font-size: 24px;
-          font-weight: 600;
-          letter-spacing: 2px;
-          color: #0a0a0a;
-          margin-bottom: 40px;
-        "
-      >
-        GUDANG KARUNG JUMBO
-      </div>
-
-      <div
-        style="
-          display: flex;
           font-size: 76px;
           font-weight: 700;
           line-height: 1.05;
